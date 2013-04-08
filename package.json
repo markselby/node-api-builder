@@ -1,0 +1,50 @@
+{
+  "name": "api-builder",
+  "description": "Build JSON API's in Node",
+  "version": "0.1.0",
+  "homepage": "https://github.com/markselby/node-api-builder",
+  "author": {
+    "name": "Mark Selby",
+    "email": "mark@writebox.co.uk",
+    "url": "writebox.co.uk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/markselby/node-api-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markselby/node-api-builder/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/markselby/node-api-builder/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/api-builder",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "dependencies": {
+    "db-query": "~0.1.0",
+    "express": ">= 3.1.1",
+    "structures": "~0.1.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "api",
+    "build",
+    "create",
+    "json",
+    "node",
+    "nodejs"
+  ]
+}
