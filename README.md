@@ -23,7 +23,7 @@ Routes (/config/routes.js) looks like this :
 ```javascript
 module.exports = [
   { path:'/', method: 'get', controller: 'welcome', action: 'index' },
-  { path:'/user/:id', method: 'get', controller: 'users', action: 'view_profile' },
+  { path:'/user/:id', method: 'get', controller: 'users', action: 'view_profile' }
 ];
 ```
 
