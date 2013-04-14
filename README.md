@@ -1,30 +1,52 @@
 # api-builder [![Build Status](https://secure.travis-ci.org/mark.selby/node-api-builder.png?branch=master)](http://travis-ci.org/mark.selby/node-api-builder)
 
-Build JSON API's in Node. Working release due in May 2013.
+Build API's in Node. It loads controllers, models and structures into global.controllers.blah, global.models.blah and global.structures.blah, sets up an Express application on the desired port and initializes routes from config/routes.js.
 
 ## Getting Started
 Install the module with: `npm install api-builder`
 
+## Examples
+Start the API with :
 ```javascript
-var api_builder = require('api-builder');
-api = new api_builder({
-  models: 'app/models',
-  structures: 'app/structures'
-});
-
+  // defaults shown
+  var APIBuilder = require('api-builder');
+  api = new APIBuilder({
+    controllers: 'app/controllers',
+    models: 'app/models',
+    structures: 'app/structures',
+    port: 3001
+  });
+  api.init();
 ```
 
-## Documentation
-_(Coming soon)_
+Routes (/config/routes.js) looks like this :
+```javascript
+module.exports = [
+  { path:'/', method: 'get', controller: 'welcome', action: 'index' },
+  { path:'/user/:id', method: 'get', controller: 'users', action: 'view_profile' },
+];
+```
 
-## Examples
-_(Coming soon)_
+/app/controllers/homepage.js might look like :
+```javascript
+module.exports = {
+  index: function (req, res) {
+    // Normal express request handling goes here
+  },
+  foo: function(req, res) {
+    res.json({
+      foo: 'bar',
+      cheese: 'camembert'
+    });
+  }
+};
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+_v0.1.0_
 
 ## License
 Copyright (c) 2013 Mark Selby  
