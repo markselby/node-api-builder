@@ -22,21 +22,23 @@ Start the API with :
 Routes (/config/routes.js) looks like this :
 ```javascript
 module.exports = [
-  { path:'/', method: 'get', controller: 'welcome', action: 'index' },
+  { path:'/', method: 'get', controller: 'home', action: 'index' },
   { path:'/user/:id', method: 'get', controller: 'users', action: 'view_profile' }
 ];
 ```
 
-/app/controllers/homepage.js might look like :
+/app/controllers/home.js might look like :
 ```javascript
 module.exports = {
   index: function (req, res) {
     // Normal express request handling goes here
+    res.json({
+      cheese: 'camembert'
+    });
   },
   foo: function(req, res) {
     res.json({
-      foo: 'bar',
-      cheese: 'camembert'
+      cheese: 'edam'
     });
   }
 };
