@@ -54,6 +54,8 @@ models.User.someAttribute
 models.user.Roles.someAttribute  
 models.user.Profile.someAttribute  
 
+Note the capitalisation where a file is required, and the lowercasing of path elements and final functions/attributes.
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
