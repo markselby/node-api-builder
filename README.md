@@ -22,8 +22,8 @@ Start the API with :
 Routes (/config/routes.js) looks like this :
 ```javascript
 module.exports = [
-  { path:'/', method: 'get', controller: 'home', action: 'index' },
-  { path:'/user/:id', method: 'get', controller: 'users', action: 'view_profile' }
+  { path:'/', method: 'get', controller: 'Home', action: 'index' },
+  { path:'/user/:id', method: 'get', controller: 'Users', action: 'view_profile' }
 ];
 ```
 
@@ -43,6 +43,16 @@ module.exports = {
   }
 };
 ```
+
+You can use subdirectories for controllers, models and structures. Eg :  
+/app/models/user.js  
+/app/models/user/roles.js  
+/app/models/user/profile.js
+
+These are then accessed as :  
+models.User.someAttribute  
+models.user.Roles.someAttribute  
+models.user.Profile.someAttribute  
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
