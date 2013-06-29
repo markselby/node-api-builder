@@ -31,6 +31,8 @@
   "dependencies": {
     "express": ">= 3.1.1",
     "grunt": "~0.4.1",
+    "hiredis": "latest",
+    "redis": "latest",
     "underscore.string": ">= 0"
   },
   "devDependencies": {
