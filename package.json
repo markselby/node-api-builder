@@ -1,7 +1,7 @@
 {
   "name": "api-builder",
   "description": "Build JSON API's in Node",
-  "version": "0.1.3",
+  "version": "0.2",
   "homepage": "https://github.com/markselby/node-api-builder",
   "author": {
     "name": "Mark Selby",
@@ -29,11 +29,9 @@
     "test": "grunt nodeunit"
   },
   "dependencies": {
-    "express": ">= 3.1.1",
-    "grunt": "~0.4.1",
-    "hiredis": "latest",
-    "redis": "latest",
-    "underscore.string": ">= 0"
+    "connect-redis": "latest",
+    "grunt": "latest",
+    "redis": "latest"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
