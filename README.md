@@ -115,7 +115,7 @@ _Given_ :
 /app/models/user/roles.js  
 /app/models/user/profile.js
 
-_loaded as_ :
+_loaded as_ :  
 apiBuilder.models.load('app/models', global.models = {});
 
 _models are then accessed as_ :  
