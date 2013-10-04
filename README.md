@@ -1,6 +1,8 @@
 # api-builder [![Build Status](https://secure.travis-ci.org/mark.selby/node-api-builder.png?branch=master)](http://travis-ci.org/mark.selby/node-api-builder)
 
-Build API's in Node. It loads controllers, models and structures into global.controllers.blah, global.models.blah and global.structures.blah, sets up an Express application on the desired port and initializes routes from config/routes.js.
+Build API's in Node.
+
+It loads controllers, models and structures into global.controllers.blah, global.models.blah and global.structures.blah, sets up an Express application on the desired port and initializes routes from config/routes.js.
 
 ## Getting Started
 Install the module with: `npm install api-builder`
@@ -8,38 +10,55 @@ Install the module with: `npm install api-builder`
 ## Examples
 Start the API with :
 ```javascript
-  // defaults shown
-  var APIBuilder = require('api-builder');
-  api = new APIBuilder({
-    controllers: 'app/controllers',
-    models: 'app/models',
-    structures: 'app/structures',
-    port: 3001
-  });
-  api.init();
+var apiBuilder = require('api-builder');
+var express = require('express');
+app = express();
+
+app.use(express.cookieParser());
+
+// Use Redis for sessions
+apiBuilder.redisSession(app, express);
+
+// Optionally cache responses in Redis, to be defined per controller function
+// See sample controllers below for usage
+apiBuilder.cache.init(app, express);
+
+// Some default Express stuff
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(express.errorHandler({ showStack: true, dumpExceptions: true }));
+
+// Models available from the top level global namespace
+apiBuilder.models.load('app/models', global);
+
+// Controllers namespaced by "controllers", eg. controllers.blah.blah
+apiBuilder.controllers.load('app/controllers', global.controllers = {});
+
+// Connect some defined routes to your controller functions
+apiBuilder.routes.load(app, 'config/routes.yml', global.controllers);
 ```
 
-Routes (/config/routes.js) looks like this :
-```javascript
-module.exports = [
-  { path:'/', method: 'get', controller: 'Home', action: 'index' },
-  { path:'/user/:id', method: 'get', controller: 'Users', action: 'view_profile' }
-];
+Routes (/config/routes.yml) might look like this :
+```yaml
+- { path: '/',                            method: get,    action: Home.index }
+- { path: '/:slug/:id/blogs',             method: get,    action: Blogs.show }
+- { path: '/users/details',               method: get,    action: Users.details }
+- { path: '/contact-us',                  method: post,   action: Messages.contactUs }
 ```
 
 /app/controllers/home.js might look like :
 ```javascript
 module.exports = {
   index: function (req, res) {
-    // Normal express request handling goes here
+    res.cache = 3600; // Cache this in Redis for one hour
     res.json({
       cheese: 'camembert'
     });
   },
   foo: function(req, res) {
-    res.json({
-      cheese: 'edam'
-    });
+    // This won't cache because we haven't defined a res.cache lifetime
+    res.render('some/template', { cheese: 'edam' });
   }
 };
 ```
@@ -49,18 +68,13 @@ You can use subdirectories for controllers, models and structures. Eg :
 /app/models/user/roles.js  
 /app/models/user/profile.js
 
-These are then accessed as :  
+Assuming a models prefix of "models" are then accessed as :  
 models.User.someAttribute  
-models.user.Roles.someAttribute  
-models.user.Profile.someAttribute  
-
-Note the capitalisation where a file is required, and the lowercasing of path elements and final functions/attributes.
+models.User.Roles.someAttribute  
+models.User.Profile.someAttribute  
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_v0.1.0_
 
 ## License
 Copyright (c) 2013 Mark Selby  
