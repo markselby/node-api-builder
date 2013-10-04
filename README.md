@@ -2,8 +2,8 @@
 
 Build API's in Node.
 
-Load controllers, models and structures into optionally namespaced target(s).
-Initialize routes from config/routes.js.
+Load controllers, models and structures into optionally namespaced target(s).  
+Initialize routes from config/routes.js.  
 Easily add Redis backed sessions and gzipped Redis response caching.
 
 ## Getting Started
@@ -40,8 +40,8 @@ _then in your server.js_
 apiBuilder.redisSession(app, express);
 ```
 
-Optionally cache responses in Redis, to be defined per controller function.
-See sample controllers below for usage.
+Optionally cache responses in Redis, to be defined per controller function.  
+See sample controllers below for usage.  
 Requires a _config/redis-cache.yml_, something like :
 
 ```yaml
@@ -61,20 +61,28 @@ _then in your server.js say_
 
 ```javascript
 apiBuilder.cache.init(app, express);
+```
 
-// Now some default Express stuff
+Now some default Express stuff
+```javascript
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.errorHandler({ showStack: true, dumpExceptions: true }));
+```
 
-// Models available from the top level global namespace
+Make models available from the top level global namespace
+```javascript
 apiBuilder.models.load('app/models', global);
+```
 
-// Controllers namespaced by "controllers", eg. controllers.blah.blah
+Controllers namespaced by "controllers", eg. controllers.blah.blah
+```javascript
 apiBuilder.controllers.load('app/controllers', global.controllers = {});
+```
 
-// Connect some defined routes to your controller functions
+Now you can connect some defined routes to your controller functions
+```javascript
 apiBuilder.routes.load(app, 'config/routes.yml', global.controllers);
 ```
 
