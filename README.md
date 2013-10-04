@@ -2,7 +2,9 @@
 
 Build API's in Node.
 
-It loads controllers, models and structures into global.controllers.blah, global.models.blah and global.structures.blah, sets up an Express application on the desired port and initializes routes from config/routes.js.
+Load controllers, models and structures into optionally namespaced target(s).
+Initialize routes from config/routes.js.
+Easily add Redis backed sessions and gzipped Redis response caching.
 
 ## Getting Started
 Install the module with: `npm install api-builder`
@@ -17,10 +19,41 @@ app = express();
 app.use(express.cookieParser());
 
 // Use Redis for sessions
+// Requires a config/redis-cache.yml, something like :
+```yaml
+defaults: &defaults
+  db: 2
+  host: localhost
+  port: 6379
+
+development:
+  <<: *defaults
+  secret: qwertyuiop-dev:-)
+
+production:
+  <<: *defaults
+  secret: qwertyuiop-prod:-)
+```
+_then in your server.js_
 apiBuilder.redisSession(app, express);
 
 // Optionally cache responses in Redis, to be defined per controller function
 // See sample controllers below for usage
+// Requires a config/redis-cache.yml, something like :
+```yaml
+defaults: &defaults
+  host: localhost
+  port: 6379
+
+development:
+  <<: *defaults
+  password: redis
+
+production:
+  <<: *defaults
+  password: hard-password
+```
+_then in your server.js say_
 apiBuilder.cache.init(app, express);
 
 // Some default Express stuff
@@ -63,12 +96,15 @@ module.exports = {
 };
 ```
 
-You can use subdirectories for controllers, models and structures. Eg :  
+_Given_ :  
 /app/models/user.js  
 /app/models/user/roles.js  
 /app/models/user/profile.js
 
-Assuming a models prefix of "models" are then accessed as :  
+_loaded as_ :
+apiBuilder.models.load('app/models', global.models = {});
+
+_models are then accessed as_ :  
 models.User.someAttribute  
 models.User.Roles.someAttribute  
 models.User.Profile.someAttribute  
