@@ -9,7 +9,7 @@ Easily add Redis backed sessions and gzipped Redis response caching.
 ## Getting Started
 Install the module with: `npm install api-builder`
 
-## Example server.js
+## Building your server.js
 
 ```javascript
 var apiBuilder = require('api-builder');
@@ -18,8 +18,8 @@ app = express();
 app.use(express.cookieParser());
 ```
 
-Use Redis for sessions
-_Requires a config/redis-cache.yml, something like_ :
+Use Redis for sessions  
+Requires a _config/redis-session.yml_, something like :
 ```yaml
 defaults: &defaults
   db: 2
@@ -40,9 +40,9 @@ _then in your server.js_
 apiBuilder.redisSession(app, express);
 ```
 
-Optionally cache responses in Redis, to be defined per controller function
-_See sample controllers below for usage_
-_Requires a config/redis-cache.yml, something like_ :
+Optionally cache responses in Redis, to be defined per controller function.
+See sample controllers below for usage.
+Requires a _config/redis-cache.yml_, something like :
 
 ```yaml
 defaults: &defaults
@@ -78,7 +78,7 @@ apiBuilder.controllers.load('app/controllers', global.controllers = {});
 apiBuilder.routes.load(app, 'config/routes.yml', global.controllers);
 ```
 
-Routes (/config/routes.yml) might look like this :
+Routes (config/routes.yml) might look like this :
 ```yaml
 - { path: '/',                            method: get,    action: Home.index }
 - { path: '/:slug/:id/blogs',             method: get,    action: Blogs.show }
