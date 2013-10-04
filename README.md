@@ -34,7 +34,7 @@ production:
   <<: *defaults
   secret: qwertyuiop-prod:-)
 ```
-_then in your server.js_
+then in your server.js
 
 ```javascript
 apiBuilder.redisSession(app, express);
@@ -110,18 +110,22 @@ module.exports = {
 };
 ```
 
-_Given_ :  
+Given :  
 /app/models/user.js  
 /app/models/user/roles.js  
 /app/models/user/profile.js
 
-_loaded as_ :  
+loaded as :  
+```javascript
 apiBuilder.models.load('app/models', global.models = {});
+```
 
-_models are then accessed as_ :  
+models are then accessed as :  
+```javascript
 models.User.someAttribute  
 models.User.Roles.someAttribute  
 models.User.Profile.someAttribute  
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
