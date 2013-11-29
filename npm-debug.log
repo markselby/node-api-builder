@@ -1,0 +1,177 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/mark/.nvm/v0.11.2/bin/node',
+1 verbose cli   '/home/mark/.nvm/v0.11.2/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@1.2.21
+3 info using node@v0.11.2
+4 verbose publish [ '.' ]
+5 verbose read json /home/mark/Modules/node-api-builder/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /home/mark/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+14 verbose folder .
+15 info prepublish api-builder@0.2.1
+16 silly lockFile 3a52ce78- .
+17 verbose lock . /home/mark/.npm/3a52ce78-.lock
+18 silly lockFile c033a8d0-38467-0-7264622305519879-tmp-tgz /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+19 verbose lock /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz /home/mark/.npm/c033a8d0-38467-0-7264622305519879-tmp-tgz.lock
+20 silly lockFile 3a52ce78- .
+21 silly lockFile 3a52ce78- .
+22 silly lockFile c033a8d0-38467-0-7264622305519879-tmp-tgz /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+23 silly lockFile c033a8d0-38467-0-7264622305519879-tmp-tgz /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+24 verbose tar unpack /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+25 silly lockFile fca9ff57-38467-0-7264622305519879-package /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package
+26 verbose lock /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package /home/mark/.npm/fca9ff57-38467-0-7264622305519879-package.lock
+27 silly lockFile c033a8d0-38467-0-7264622305519879-tmp-tgz /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+28 verbose lock /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz /home/mark/.npm/c033a8d0-38467-0-7264622305519879-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry .npmignore
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm extractEntry Gruntfile.js
+34 silly gunzTarPerm extractEntry .jshintrc
+35 silly gunzTarPerm extractEntry LICENSE-MIT
+36 silly gunzTarPerm extractEntry lib/api-builder.js
+37 silly gunzTarPerm extractEntry lib/cache.js
+38 silly gunzTarPerm modified mode [ 'lib/cache.js', 438, 420 ]
+39 silly gunzTarPerm extractEntry lib/controllers.js
+40 silly gunzTarPerm modified mode [ 'lib/controllers.js', 438, 420 ]
+41 silly gunzTarPerm extractEntry lib/helpers.js
+42 silly gunzTarPerm modified mode [ 'lib/helpers.js', 438, 420 ]
+43 silly gunzTarPerm extractEntry lib/initialize.js
+44 silly gunzTarPerm modified mode [ 'lib/initialize.js', 438, 420 ]
+45 silly gunzTarPerm extractEntry lib/models.js
+46 silly gunzTarPerm modified mode [ 'lib/models.js', 438, 420 ]
+47 silly gunzTarPerm extractEntry lib/redis-session.js
+48 silly gunzTarPerm modified mode [ 'lib/redis-session.js', 438, 420 ]
+49 silly gunzTarPerm extractEntry lib/rest.js
+50 silly gunzTarPerm modified mode [ 'lib/rest.js', 438, 420 ]
+51 silly gunzTarPerm extractEntry lib/routes.js
+52 silly gunzTarPerm modified mode [ 'lib/routes.js', 438, 420 ]
+53 silly gunzTarPerm extractEntry test/api-builder_test.js
+54 verbose read json /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package/package.json
+55 silly lockFile fca9ff57-38467-0-7264622305519879-package /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package
+56 silly lockFile fca9ff57-38467-0-7264622305519879-package /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package
+57 silly lockFile c033a8d0-38467-0-7264622305519879-tmp-tgz /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+58 silly lockFile c033a8d0-38467-0-7264622305519879-tmp-tgz /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/tmp.tgz
+59 verbose from cache /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package/package.json
+60 verbose tar pack [ '/home/mark/.npm/api-builder/0.2.1/package.tgz',
+60 verbose tar pack   '/home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package' ]
+61 verbose tarball /home/mark/.npm/api-builder/0.2.1/package.tgz
+62 verbose folder /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package
+63 silly lockFile fca9ff57-38467-0-7264622305519879-package /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package
+64 verbose lock /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package /home/mark/.npm/fca9ff57-38467-0-7264622305519879-package.lock
+65 silly lockFile f95f2375-pm-api-builder-0-2-1-package-tgz /home/mark/.npm/api-builder/0.2.1/package.tgz
+66 verbose lock /home/mark/.npm/api-builder/0.2.1/package.tgz /home/mark/.npm/f95f2375-pm-api-builder-0-2-1-package-tgz.lock
+67 silly lockFile fca9ff57-38467-0-7264622305519879-package /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package
+68 silly lockFile fca9ff57-38467-0-7264622305519879-package /home/mark/tmp/npm-8610/1385711938467-0.7264622305519879/package
+69 silly lockFile f95f2375-pm-api-builder-0-2-1-package-tgz /home/mark/.npm/api-builder/0.2.1/package.tgz
+70 silly lockFile f95f2375-pm-api-builder-0-2-1-package-tgz /home/mark/.npm/api-builder/0.2.1/package.tgz
+71 silly lockFile 9dfa0a90-rk-npm-api-builder-0-2-1-package /home/mark/.npm/api-builder/0.2.1/package
+72 verbose lock /home/mark/.npm/api-builder/0.2.1/package /home/mark/.npm/9dfa0a90-rk-npm-api-builder-0-2-1-package.lock
+73 silly lockFile 9dfa0a90-rk-npm-api-builder-0-2-1-package /home/mark/.npm/api-builder/0.2.1/package
+74 silly lockFile 9dfa0a90-rk-npm-api-builder-0-2-1-package /home/mark/.npm/api-builder/0.2.1/package
+75 verbose tar unpack /home/mark/.npm/api-builder/0.2.1/package.tgz
+76 silly lockFile 9dfa0a90-rk-npm-api-builder-0-2-1-package /home/mark/.npm/api-builder/0.2.1/package
+77 verbose lock /home/mark/.npm/api-builder/0.2.1/package /home/mark/.npm/9dfa0a90-rk-npm-api-builder-0-2-1-package.lock
+78 silly lockFile f95f2375-pm-api-builder-0-2-1-package-tgz /home/mark/.npm/api-builder/0.2.1/package.tgz
+79 verbose lock /home/mark/.npm/api-builder/0.2.1/package.tgz /home/mark/.npm/f95f2375-pm-api-builder-0-2-1-package-tgz.lock
+80 silly gunzTarPerm modes [ '755', '644' ]
+81 silly gunzTarPerm extractEntry package.json
+82 silly gunzTarPerm extractEntry .npmignore
+83 silly gunzTarPerm extractEntry README.md
+84 silly gunzTarPerm extractEntry Gruntfile.js
+85 silly gunzTarPerm extractEntry .jshintrc
+86 silly gunzTarPerm extractEntry LICENSE-MIT
+87 silly gunzTarPerm extractEntry lib/api-builder.js
+88 silly gunzTarPerm extractEntry lib/cache.js
+89 silly gunzTarPerm extractEntry lib/controllers.js
+90 silly gunzTarPerm extractEntry lib/helpers.js
+91 silly gunzTarPerm extractEntry lib/initialize.js
+92 silly gunzTarPerm extractEntry lib/models.js
+93 silly gunzTarPerm extractEntry lib/redis-session.js
+94 silly gunzTarPerm extractEntry lib/rest.js
+95 silly gunzTarPerm extractEntry lib/routes.js
+96 silly gunzTarPerm extractEntry test/api-builder_test.js
+97 verbose read json /home/mark/.npm/api-builder/0.2.1/package/package.json
+98 silly lockFile 9dfa0a90-rk-npm-api-builder-0-2-1-package /home/mark/.npm/api-builder/0.2.1/package
+99 silly lockFile 9dfa0a90-rk-npm-api-builder-0-2-1-package /home/mark/.npm/api-builder/0.2.1/package
+100 silly lockFile f95f2375-pm-api-builder-0-2-1-package-tgz /home/mark/.npm/api-builder/0.2.1/package.tgz
+101 silly lockFile f95f2375-pm-api-builder-0-2-1-package-tgz /home/mark/.npm/api-builder/0.2.1/package.tgz
+102 verbose from cache /home/mark/.npm/api-builder/0.2.1/package/package.json
+103 verbose chmod /home/mark/.npm/api-builder/0.2.1/package.tgz 644
+104 verbose chown /home/mark/.npm/api-builder/0.2.1/package.tgz [ 1000, 1000 ]
+105 silly lockFile 3a52ce78- .
+106 silly publish { name: 'api-builder',
+106 silly publish   description: 'Build JSON API\'s in Node',
+106 silly publish   version: '0.2.1',
+106 silly publish   homepage: 'https://github.com/markselby/node-api-builder',
+106 silly publish   author:
+106 silly publish    { name: 'Mark Selby',
+106 silly publish      email: 'mark@writebox.co.uk',
+106 silly publish      url: 'writebox.co.uk' },
+106 silly publish   repository:
+106 silly publish    { type: 'git',
+106 silly publish      url: 'git://github.com/markselby/node-api-builder.git' },
+106 silly publish   bugs: { url: 'https://github.com/markselby/node-api-builder/issues' },
+106 silly publish   licenses:
+106 silly publish    [ { type: 'MIT',
+106 silly publish        url: 'https://github.com/markselby/node-api-builder/blob/master/LICENSE-MIT' } ],
+106 silly publish   main: 'lib/api-builder',
+106 silly publish   engines: { node: '>= 0.8.0' },
+106 silly publish   scripts: { test: 'grunt nodeunit' },
+106 silly publish   dependencies: { 'connect-redis': 'latest', grunt: 'latest', redis: 'latest' },
+106 silly publish   devDependencies:
+106 silly publish    { 'grunt-contrib-jshint': '~0.1.1',
+106 silly publish      'grunt-contrib-nodeunit': '~0.1.2',
+106 silly publish      'grunt-contrib-watch': '~0.2.0' },
+106 silly publish   keywords: [ 'api', 'build', 'create', 'json', 'node', 'nodejs' ],
+106 silly publish   readme: '# api-builder [![Build Status](https://secure.travis-ci.org/mark.selby/node-api-builder.png?branch=master)](http://travis-ci.org/mark.selby/node-api-builder)\n\nBuild API\'s in Node.\n\nLoad controllers, models and structures into optionally namespaced target(s).  \nInitialize routes from config/routes.js.  \nEasily add Redis backed sessions and gzipped Redis response caching.\n\n## Getting Started\nInstall the module with: `npm install api-builder`\n\n## Building your server.js\n\n```javascript\nvar apiBuilder = require(\'api-builder\');\nvar express = require(\'express\');\napp = express();\napp.use(express.cookieParser());\n```\n\nUse Redis for sessions  \nRequires a _config/redis-session.yml_, something like :\n```yaml\ndefaults: &defaults\n  db: 2\n  host: localhost\n  port: 6379\n\ndevelopment:\n  <<: *defaults\n  secret: qwertyuiop-dev:-)\n\nproduction:\n  <<: *defaults\n  secret: qwertyuiop-prod:-)\n```\nthen in your server.js\n\n```javascript\napiBuilder.redisSession(app, express);\n```\n\nOptionally cache responses in Redis, to be defined per controller function.  \nSee sample controllers below for usage.  \nRequires a _config/redis-cache.yml_, something like :\n\n```yaml\ndefaults: &defaults\n  host: localhost\n  port: 6379\n\ndevelopment:\n  <<: *defaults\n  password: redis\n\nproduction:\n  <<: *defaults\n  password: hard-password\n```\n_then in your server.js say_\n\n```javascript\napiBuilder.cache.init(app, express);\n```\n\nNow some default Express stuff\n```javascript\napp.use(express.bodyParser());\napp.use(express.methodOverride());\napp.use(app.router);\napp.use(express.errorHandler({ showStack: true, dumpExceptions: true }));\n```\n\nMake models available from the top level global namespace\n```javascript\napiBuilder.models.load(\'app/models\', global);\n```\n\nControllers namespaced by "controllers", eg. controllers.blah.blah\n```javascript\napiBuilder.controllers.load(\'app/controllers\', global.controllers = {});\n```\n\nNow you can connect some defined routes to your controller functions\n```javascript\napiBuilder.routes.load(app, \'config/routes.yml\', global.controllers);\n```\n\nRoutes (config/routes.yml) might look like this :\n```yaml\n- { path: \'/\',                            method: get,    action: Home.index }\n- { path: \'/:slug/:id/blogs\',             method: get,    action: Blogs.show }\n- { path: \'/users/details\',               method: get,    action: Users.details }\n- { path: \'/contact-us\',                  method: post,   action: Messages.contactUs }\n```\n\n/app/controllers/home.js might look like :\n```javascript\nmodule.exports = {\n  index: function (req, res) {\n    res.cache = 3600; // Cache this in Redis for one hour\n    res.json({\n      cheese: \'camembert\'\n    });\n  },\n  foo: function(req, res) {\n    // This won\'t cache because we haven\'t defined a res.cache lifetime\n    res.render(\'some/template\', { cheese: \'edam\' });\n  }\n};\n```\n\nGiven :  \n/app/models/user.js  \n/app/models/user/roles.js  \n/app/models/user/profile.js\n\nloaded as :  \n```javascript\napiBuilder.models.load(\'app/models\', global.models = {});\n```\n\nmodels are then accessed as :  \n```javascript\nmodels.User.someAttribute  \nmodels.User.Roles.someAttribute  \nmodels.User.Profile.someAttribute  \n```\n\n## Contributing\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).\n\n## License\nCopyright (c) 2013 Mark Selby  \nLicensed under the MIT license.\n',
+106 silly publish   readmeFilename: 'README.md',
+106 silly publish   _id: 'api-builder@0.2.1',
+106 silly publish   dist: { shasum: '113fdb831a929f0aa0fdfee64d6a7bc9e9393f1a' },
+106 silly publish   _from: '.' }
+107 verbose url raw api-builder
+108 verbose url resolving [ 'https://registry.npmjs.org/', './api-builder' ]
+109 verbose url resolved https://registry.npmjs.org/api-builder
+110 info trying registry request attempt 1 at 16:00:00
+111 http PUT https://registry.npmjs.org/api-builder
+112 http 409 https://registry.npmjs.org/api-builder
+113 verbose url raw api-builder
+114 verbose url resolving [ 'https://registry.npmjs.org/', './api-builder' ]
+115 verbose url resolved https://registry.npmjs.org/api-builder
+116 info trying registry request attempt 1 at 16:00:02
+117 http GET https://registry.npmjs.org/api-builder
+118 http 200 https://registry.npmjs.org/api-builder
+119 error publish fail Cannot publish over existing version.
+119 error publish fail Update the 'version' field in package.json and try again.
+119 error publish fail
+119 error publish fail If the previous version was published in error, see:
+119 error publish fail     npm help unpublish
+119 error publish fail
+119 error publish fail To automatically increment version numbers, see:
+119 error publish fail     npm help version
+120 error System Linux 3.11.0-13-generic
+121 error command "/home/mark/.nvm/v0.11.2/bin/node" "/home/mark/.nvm/v0.11.2/bin/npm" "publish"
+122 error cwd /home/mark/Modules/node-api-builder
+123 error node -v v0.11.2
+124 error npm -v 1.2.21
+125 error code EPUBLISHCONFLICT
+126 verbose exit [ 1, true ]
